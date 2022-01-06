@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="3dp"
+    android:layout_marginLeft="3dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginEnd="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginBottom="2dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout62"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/fundo_elevado"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/icAdapterTotal2"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_right_24" />
+
+        <TextView
+            android:id="@+id/textAdapterItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:gravity="left"
+            android:paddingLeft="2dp"
+            android:paddingRight="4dp"
+            android:text="Alicate de Crimpar"
+            android:textColor="@color/azulEscuro"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/icAdapterTotal2"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toEndOf="@+id/icAdapterTotal2"
+            app:layout_constraintTop_toTopOf="@+id/icAdapterTotal2" />
+
+        <TextView
+            android:id="@+id/textAdapterOutros"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:gravity="left"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Outros"
+            android:textColor="@color/azulEscuro"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/textAdapterSentido"
+            app:layout_constraintStart_toStartOf="@+id/textAdapterItem"
+            app:layout_constraintTop_toBottomOf="@+id/textAdapterItem" />
+
+        <TextView
+            android:id="@+id/textAdapterData"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingRight="4dp"
+            android:text="21-06-2021"
+            android:textColor="@color/azulEscuro"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/icDireitaAdapterTotal2"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/textAdapterItem" />
+
+        <TextView
+            android:id="@+id/textAdapterSentido"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingRight="4dp"
+            android:text="ATUALIZADO"
+            android:textColor="@color/azulEscuro"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/icDireitaAdapterTotal2"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icDireitaAdapterTotal2"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_left_24" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

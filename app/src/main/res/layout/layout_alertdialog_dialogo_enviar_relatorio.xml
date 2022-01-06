@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fundo_recyclerview_borda"
+    android:minWidth="345dp">
+
+    <TextView
+        android:id="@+id/textViewTituloDialogoEnviarRelatorio"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/fundo_titulo_activity"
+        android:padding="4dp"
+        android:text="Exportar Dados"
+        android:textColor="@color/branco"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDescricaoDialogoEnviarRelatorio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="Deseja enviar o arquivo via WhatsApp ou E-mail?"
+        android:textColor="@color/azulEscuro"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTituloDialogoEnviarRelatorio" />
+
+    <Button
+        android:id="@+id/btCancelarDialogoEnviarRelatorio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/fundo_elevado"
+        android:text="Sair"
+        app:layout_constraintBottom_toBottomOf="@+id/btExportarDialogoEnviarRelatorioWhatsApp"
+        app:layout_constraintEnd_toStartOf="@+id/btExportarDialogoEnviarRelatorioWhatsApp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btExportarDialogoEnviarRelatorioWhatsApp" />
+
+    <Button
+        android:id="@+id/btExportarDialogoEnviarRelatorioWhatsApp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/fundo_elevado"
+        android:drawableLeft="@drawable/ic_whats"
+        android:padding="4dp"
+        android:text="WHATS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btExportarDialogoEnviarRelatorioEmail"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btCancelarDialogoEnviarRelatorio"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescricaoDialogoEnviarRelatorio" />
+
+    <Button
+        android:id="@+id/btExportarDialogoEnviarRelatorioEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/fundo_elevado"
+        android:drawableLeft="@drawable/ic_email"
+        android:padding="4dp"
+        android:text="E-MAIL"
+        app:layout_constraintBottom_toBottomOf="@+id/btExportarDialogoEnviarRelatorioWhatsApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btExportarDialogoEnviarRelatorioWhatsApp"
+        app:layout_constraintTop_toTopOf="@+id/btExportarDialogoEnviarRelatorioWhatsApp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

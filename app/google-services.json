@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "945061742032",
+    "project_id": "unitecnicos-12b16",
+    "storage_bucket": "unitecnicos-12b16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945061742032:android:c7a3e2703b846d164de5d5",
+        "android_client_info": {
+          "package_name": "com.stizsoftware.unitecnicos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945061742032-ite8vlqj61t8narnbflees7o0741vfhl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stizsoftware.unitecnicos",
+            "certificate_hash": "514dacebacae59794f552beb341eb9c9347c4ec6"
+          }
+        },
+        {
+          "client_id": "945061742032-1puk2dsn8qghqgqp3s50a1hrnsrihfkb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnJcmZyal-VQXLtlZ6KdOI9HwQtN-fuZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945061742032-1puk2dsn8qghqgqp3s50a1hrnsrihfkb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

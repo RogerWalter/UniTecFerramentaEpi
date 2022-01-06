@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fundo_recyclerview_borda"
+    android:minWidth="345dp">
+
+    <TextView
+        android:id="@+id/textViewTituloAdicionarItemPedido"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_margin="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/fundo_titulo_activity"
+        android:padding="4dp"
+        android:text="Solicitação do Técnico"
+        android:textColor="@color/branco"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDescricaoAdicionarItemPedido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:gravity="center"
+        android:text="Informe o item solicitado pelo técnico:"
+        android:textColor="@color/azulEscuro"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTituloAdicionarItemPedido" />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/editTextItemAddPedido"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Descrição do item"
+        android:paddingLeft="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextQtdItemAddPedido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescricaoAdicionarItemPedido" />
+
+
+    <EditText
+        android:id="@+id/editTextQtdItemAddPedido"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Qtd"
+        android:inputType="number"
+        android:paddingLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextItemAddPedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextItemAddPedido" />
+
+    <Button
+        android:id="@+id/btAdicionarItemPedido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/fundo_elevado"
+        android:text="Salvar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btCancelarDialogoAdicionarItemPedido"
+        app:layout_constraintTop_toBottomOf="@+id/editTextItemAddPedido" />
+
+    <Button
+        android:id="@+id/btCancelarDialogoAdicionarItemPedido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/fundo_elevado"
+        android:text="Sair"
+        app:layout_constraintBottom_toBottomOf="@+id/btAdicionarItemPedido"
+        app:layout_constraintEnd_toStartOf="@+id/btAdicionarItemPedido"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btAdicionarItemPedido" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

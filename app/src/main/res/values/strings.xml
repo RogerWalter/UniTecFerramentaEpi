@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Checklist</string>
+    <string-array name="array_marcas">
+        <item></item>
+        <item>Gedore</item>
+        <item>Robust</item>
+        <item>Vonder</item>
+        <item>Brady</item>
+        <item>Brasfort</item>
+        <item>Brother</item>
+        <item>Furukawa</item>
+        <item>Kamide</item>
+        <item>Minipa</item>
+        <item>Starret</item>
+        <item>Tramontina</item>
+    </string-array>
+</resources>

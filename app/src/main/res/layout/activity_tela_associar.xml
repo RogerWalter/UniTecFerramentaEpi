@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    tools:context=".activity.activity.TelaAssociar">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/fundo_titulo_activity"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp"
+        android:text="Liberar"
+        android:textColor="@color/branco"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+        <RadioButton
+            android:id="@+id/rbFerramenta"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/azulEscuro"
+            android:text="Ferramenta"
+            android:textColor="@color/azulEscuro" />
+
+        <RadioButton
+            android:id="@+id/rbEpi"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/azulEscuro"
+            android:text="EPI"
+            android:textColor="@color/azulEscuro" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewDescLibItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Selecione um item da lista:"
+        android:textColor="@color/azulEscuro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/editTextPesquisaItemLiberar"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@android:drawable/editbox_background"
+        android:drawableLeft="@drawable/ic_pesquisar"
+        android:hint="Pesquisar"
+        android:paddingLeft="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescLibItem" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLiberarItem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/fundo_recyclerview_borda"
+        android:padding="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDescLiberarItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPesquisaItemLiberar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/fundo_recyclerview_borda"
+        app:layout_constraintBottom_toTopOf="@+id/btSalvarLiberarItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textViewNomelb2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:text="Nome:"
+            android:textColor="@color/azulEscuro"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewlb1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:text="Outras Informações:"
+            android:textColor="@color/azulEscuro"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNomeItemSelecionadoLiberar" />
+
+        <TextView
+            android:id="@+id/textViewOutrosItemSelecionadoLiberar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_baseline_arrow_right_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_left_24"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="-"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewlb1" />
+
+        <TextView
+            android:id="@+id/textViewNomeItemSelecionadoLiberar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_baseline_arrow_right_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_left_24"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="-"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNomelb2" />
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:text="Qtd:"
+            android:textColor="@color/azulEscuro"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOutrosItemSelecionadoLiberar" />
+
+        <EditText
+            android:id="@+id/editTextQtdItemLiberar"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            android:background="@android:drawable/editbox_background"
+            android:gravity="left|center_vertical"
+            android:inputType="number"
+            android:paddingLeft="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView11"
+            app:layout_constraintStart_toStartOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <Button
+            android:id="@+id/btCamera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/fundo_elevado"
+            android:foreground="@drawable/ic_camera"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextMotivoItemLiberar" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:text="Motivo:"
+            android:textColor="@color/azulEscuro"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOutrosItemSelecionadoLiberar" />
+
+        <EditText
+            android:id="@+id/editTextMotivoItemLiberar"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@android:drawable/editbox_background"
+            android:gravity="top|left"
+            android:inputType="textPersonName"
+            android:paddingLeft="8dp"
+            android:textColorHighlight="@color/branco"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextQtdItemLiberar"
+            app:layout_constraintEnd_toStartOf="@+id/editTextQtdItemLiberar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <ImageView
+            android:id="@+id/imageViewComOuSemFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btCamera"
+            app:layout_constraintStart_toEndOf="@+id/btCamera"
+            app:layout_constraintTop_toTopOf="@+id/btCamera"
+            app:srcCompat="@drawable/ic_baseline_cancel_24" />
+
+        <ImageView
+            android:id="@+id/imageViewComOuSemFoto1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btCamera"
+            app:layout_constraintEnd_toStartOf="@+id/btCamera"
+            app:layout_constraintTop_toTopOf="@+id/btCamera"
+            app:srcCompat="@drawable/ic_baseline_cancel_24" />
+
+        <TextView
+            android:id="@+id/textViewFotoSelecionadaOuNao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="(Sem imagem)"
+            android:textColor="@color/azulEscuro"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewComOuSemFoto"
+            app:layout_constraintStart_toEndOf="@+id/imageViewComOuSemFoto"
+            app:layout_constraintTop_toTopOf="@+id/imageViewComOuSemFoto" />
+
+        <TextView
+            android:id="@+id/textViewFotoSelecionadaOuNao1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="(Sem imagem)"
+            android:textColor="@color/azulEscuro"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewComOuSemFoto1"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewComOuSemFoto1"
+            app:layout_constraintTop_toTopOf="@+id/imageViewComOuSemFoto1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textViewDescLiberarItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Selecionado:"
+        android:textColor="@color/azulEscuro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btSalvarLiberarItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/fundo_elevado"
+        android:text="Confirmar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btCancelarLiberarItem" />
+
+    <Button
+        android:id="@+id/btCancelarLiberarItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_weight="1"
+        android:background="@drawable/fundo_elevado"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toBottomOf="@+id/btSalvarLiberarItem"
+        app:layout_constraintEnd_toStartOf="@+id/btSalvarLiberarItem"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btSalvarLiberarItem" />
+
+    <ImageView
+        android:id="@+id/imageViewSemDadosTelaAssociar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerViewLiberarItem"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerViewLiberarItem"
+        app:layout_constraintStart_toStartOf="@+id/recyclerViewLiberarItem"
+        app:layout_constraintTop_toTopOf="@+id/recyclerViewLiberarItem"
+        app:srcCompat="@drawable/sem_dados" />
+
+    <ProgressBar
+        android:id="@+id/progressBarTelaAssociar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerViewLiberarItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescLibItem" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    tools:context=".activity.activity.TelaRelatorios">
+
+    <TextView
+        android:id="@+id/textView80"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/fundo_titulo_activity"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp"
+        android:text="Relatorios"
+        android:textColor="@color/branco"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btContagemGeralDeFerramentas"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/fundo_elevado"
+        android:drawableLeft="@drawable/ic_ferramenta"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:text="Totalização de Ferramentas"
+        android:textColor="@color/azulEscuro"
+        app:layout_constraintEnd_toStartOf="@+id/btContagemGeralDeEpis"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView80" />
+
+    <Button
+        android:id="@+id/btContagemGeralDeEpis"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/fundo_elevado"
+        android:drawableLeft="@drawable/ic_epi_botao"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:text="Totalização de EPI's"
+        android:textColor="@color/azulEscuro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btContagemGeralDeFerramentas"
+        app:layout_constraintTop_toBottomOf="@+id/textView80" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/btSairTelaRelatorios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPesquisaRelatorio">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TÉCNICOS"
+            android:textColor="@color/azulEscuro"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTecnicosRelatorio"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/fundo_recyclerview_borda"
+            android:padding="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ITENS"
+            android:textColor="@color/azulEscuro"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1">
+
+            <RadioButton
+                android:id="@+id/rbFerramentaRelatorio"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/azulEscuro"
+                android:text="Ferramenta"
+                android:textColor="@color/azulEscuro" />
+
+            <RadioButton
+                android:id="@+id/rbEpiRelatorio"
+                android:layout_width="194dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/azulEscuro"
+                android:text="EPI"
+                android:textColor="@color/azulEscuro" />
+        </RadioGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewItensRelatorio"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/fundo_recyclerview_borda"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.47" />
+
+        <ImageView
+            android:id="@+id/imageViewSemDadosTelaRelatoriosTecnicos"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="32dp"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclerViewTecnicosRelatorio"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerViewTecnicosRelatorio"
+            app:layout_constraintStart_toStartOf="@+id/recyclerViewTecnicosRelatorio"
+            app:layout_constraintTop_toTopOf="@+id/recyclerViewTecnicosRelatorio"
+            app:srcCompat="@drawable/sem_dados" />
+
+        <ImageView
+            android:id="@+id/imageViewSemDadosTelaRelatoriosItens"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="32dp"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclerViewItensRelatorio"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerViewItensRelatorio"
+            app:layout_constraintStart_toStartOf="@+id/recyclerViewItensRelatorio"
+            app:layout_constraintTop_toTopOf="@+id/recyclerViewItensRelatorio"
+            app:srcCompat="@drawable/sem_dados" />
+
+        <ProgressBar
+            android:id="@+id/progressBarRelatoriosTecnicos"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclerViewTecnicosRelatorio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ProgressBar
+            android:id="@+id/progressBarRelatoriosItens"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btQtdFerramentaQtdTecnico"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/fundo_elevado"
+        android:drawableLeft="@drawable/ic_maleta"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:text="FERRAMENTAS x TÉCNICOS"
+        android:textColor="@color/azulEscuro"
+        app:layout_constraintEnd_toStartOf="@+id/btQtdEpiQtdTecnico"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btContagemGeralDeEpis" />
+
+    <Button
+        android:id="@+id/btQtdEpiQtdTecnico"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/fundo_elevado"
+        android:drawableLeft="@drawable/ic_epis_com_tecnico"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:text="EPI'S x TÉCNICOS"
+        android:textColor="@color/azulEscuro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btQtdFerramentaQtdTecnico"
+        app:layout_constraintTop_toBottomOf="@+id/btContagemGeralDeEpis" />
+
+    <EditText
+        android:id="@+id/editTextPesquisaRelatorio"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:drawableLeft="@drawable/ic_pesquisar"
+        android:hint="Pesquisar"
+        android:paddingLeft="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btQtdEpiQtdTecnico" />
+
+    <Button
+        android:id="@+id/btSairTelaRelatorios"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/fundo_elevado"
+        android:text="Sair"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    tools:context=".activity.activity.TelaTecnico">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem vindo!"
+        android:textColor="@color/azulEscuro"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <Button
+        android:id="@+id/logar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_botao_login"
+        android:text="Entrar"
+        android:textColor="@color/azulEscuro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSenha" />
+
+    <EditText
+        android:id="@+id/editTextLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="Login"
+        android:inputType="textPersonName"
+        android:paddingLeft="8dp"
+        android:textColor="@color/azulEscuro"
+        android:textColorHighlight="@color/branco"
+        android:textColorLink="@color/branco"
+        app:layout_constraintBottom_toTopOf="@+id/editTextSenha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Login:"
+        android:textColor="@color/azulEscuro"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextLogin"
+        app:layout_constraintEnd_toStartOf="@+id/editTextLogin"
+        app:layout_constraintTop_toTopOf="@+id/editTextLogin" />
+
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="64dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPersonName|textPassword"
+        android:paddingLeft="8dp"
+        android:textColor="@color/azulEscuro"
+        android:textColorHighlight="@color/branco"
+        android:textColorLink="@color/branco"
+        app:layout_constraintBottom_toTopOf="@+id/logar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLogin" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar Login   "
+        android:textColor="@color/azulEscuro"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSenha"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSenha" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Senha:"
+        android:textColor="@color/azulEscuro"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextSenha"
+        app:layout_constraintEnd_toStartOf="@+id/editTextSenha"
+        app:layout_constraintTop_toTopOf="@+id/editTextSenha" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="360dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tela_login" />
+
+    <ImageView
+        android:id="@+id/botaoMostrarSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@color/branco"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextSenha"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSenha"
+        app:layout_constraintTop_toTopOf="@+id/editTextSenha"
+        app:srcCompat="@drawable/mostrar_senha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
